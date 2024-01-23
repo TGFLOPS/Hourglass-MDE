@@ -1,0 +1,17 @@
+/z_custom/cat.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/indoor.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/lab0.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/lab1.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/lab2.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/outdoor0.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/outdoor1.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/0.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/1.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/2.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/3.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/4.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/5.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/6.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/7.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/8.jpg /bathroom/sync_depth_00508.png 518.8579
+/z_custom/9.jpg /bathroom/sync_depth_00508.png 518.8579
