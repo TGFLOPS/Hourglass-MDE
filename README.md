@@ -4,6 +4,4 @@ You can download pretrained "nyudepthv2_swin_large.ckpt" file from repo "MIM-Dep
 
 Inference NYU Depth V2 Dataset can downloaded from below.
 
-$ cd ./datasets
-
 $ wget http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat
