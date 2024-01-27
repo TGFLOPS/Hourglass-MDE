@@ -4,6 +4,7 @@
 # The deconvolution code is based on Simple Baseline.
 # (https://github.com/microsoft/human-pose-estimation.pytorch/blob/master/lib/models/pose_resnet.py)
 # Modified by Zigang Geng (zigang@mail.ustc.edu.cn).
+# HourglassNeck by TGFLOPS
 # ------------------------------------------------------------------------------
 
 import torch
@@ -15,10 +16,10 @@ from models.swin_transformer_v2 import SwinTransformerV2
 from deformable_attention import DeformableAttention2D
 
     
-class BottleAttentionNeck(nn.Module):
+class HourglassNeck(nn.Module):
     def __init__(self, in_dim=1536, mid_dim=768, out_dim=1536):
-        super(BottleAttentionNeck, self).__init__()
-        self.bottleattnetion = nn.Sequential(
+        super(HourglassNeck, self).__init__()
+        self.hourglass = nn.Sequential(
             nn.Conv2d(in_dim, mid_dim, kernel_size=1, bias=False),
             nn.ReLU(),
             nn.Conv2d(mid_dim, 384, kernel_size=1, bias=False),
@@ -41,7 +42,7 @@ class BottleAttentionNeck(nn.Module):
 
     def forward(self, x):
         # print("before_neck : ", x[0].shape)
-        fx = self.bottleattnetion(x[0])  # F(x)
+        fx = self.hourglass(x[0])  # F(x)
         # print("after_neck : ", fx.shape)
         out = fx + x[0]  # F(x) + x
         # print("after_fx+x[0]_neck : ", out.shape)
@@ -87,7 +88,7 @@ class GLPDepth(nn.Module):
         channels_in = embed_dim*8
         channels_out = embed_dim
         
-        self.neck = BottleAttentionNeck(in_dim=channels_in, mid_dim=768, out_dim=channels_in)
+        self.neck = HourglassNeck(in_dim=channels_in, mid_dim=768, out_dim=channels_in)
 
         self.decoder = Decoder(channels_in, channels_out, args)
         self.decoder.init_weights()
